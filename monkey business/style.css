@@ -2,7 +2,7 @@
 body {
   background-image: url("funny\ imagies\ 2007/background3.png");
   background-repeat: no-repeat;
-  background-size: 2200px 615px;
+  background-size: fill;
 }
 
 .container {
@@ -13,8 +13,8 @@ body {
   text-align: center;
   border-radius: 10px;
   margin: 5%;
-  width: auto;
-  height: 20px;
+  width: 710px;
+  height: 500px;
   background-color: rgb(37, 151, 14);
 }
 
@@ -40,7 +40,7 @@ body {
   }
 
   a:hover {
-    color:red
+    color: greenyellow
   }
 
 
@@ -71,6 +71,6 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
-    background-color: gainsboro;
+    background-color: rgb(37, 151, 14);
     border-radius: 10px;
   }
