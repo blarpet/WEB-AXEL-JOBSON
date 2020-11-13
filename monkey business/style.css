@@ -2,7 +2,7 @@
 body {
   background-image: url("funny\ imagies\ 2007/background3.png");
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: 2200px 615px;
 }
 
 .container {
@@ -10,14 +10,14 @@ body {
     margin: 5%;
   }
 .container-2 {
+  display: flex;
   text-align: center;
   border-radius: 10px;
   margin: 5%;
-  width: 710px;
-  height: 500px;
+  width: auto;
+  height: 20px;
   background-color: rgb(37, 151, 14);
 }
-
   
 .item {
     display: flex;
@@ -28,8 +28,7 @@ body {
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(37, 151, 14);
-    border-radius: 10px;
-    
+    border-radius: 10px; 
   }
 
   a:link {
@@ -38,39 +37,40 @@ body {
   a:active {
     text-decoration: underline;
   }
-
   a:hover {
-    color: greenyellow
+    color:red
   }
-
-
-
   .item + .item {
     margin-left: 2%;
   }
 
   .product-container {
-    display: flex;
+    display: flex;;
     flex-wrap: wrap;
     margin: 20%;
     height: 100px;
     justify-content: space-between;
+    color: white;
   }
 
-  .img {
+  .products img {
+    display: flex;
     object-fit: cover;
     width: 100%;
+    text-align: center;
+    justify-content: center;
   }
   
-  .products {
+  .products { 
+    display: flex;
+    justify-content: center;
     width: 32%;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 2%;
     position: relative;
-    display: flex;
     text-align: center;
-    justify-content: center;
-    background-color: rgb(37, 151, 14);
+    background-color: rgb(92, 27, 27);
     border-radius: 10px;
+    flex-direction: column;
   }
