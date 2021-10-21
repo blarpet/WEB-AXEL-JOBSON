@@ -1,0 +1,60 @@
+
+@mixin flexGeneral ($position) {
+    display: flex;
+    justify-content: $position;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: $position;
+}
+@mixin backgroundColor ($backgroundColor) {
+    background-color: $backgroundColor;
+}
+
+@mixin generalColor ($color) {
+    color: $color;
+}
+
+@mixin generalFont ($font) {
+    font-style: $font;
+}
+
+@mixin backgroundImage ($backgroundImageUrl) {
+    background-image: url($backgroundImageUrl);
+}
+
+
+/*Ren CSS*/
+
+*{
+    margin:0px;
+    padding:0px;
+    font-size: 25px;
+}
+
+nav {
+
+    @include backgroundColor(green);
+    @include flexGeneral(center);
+    align-items: center;
+    height: 15vh;
+    width: 100vW;
+}
+
+button {
+    @include generalColor(green);
+    @include generalFont(italic);
+}
+
+main {
+    height: 50vh;
+    background-color: lightgreen;
+}
+
+footer {
+    height: 100vh;
+    @include backgroundImage("https://leakeyfoundation.org/wp-content/uploads/2018/10/skywalker-hoolock-gibbon-02.adapt_.1900.1-1500x999.jpg");
+    background-color: green;
+
+}

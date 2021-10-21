@@ -1,0 +1,181 @@
+/* Creates mixins*/
+@mixin margin-RL ($var) {
+    margin-right: $var;
+    margin-left: $var;
+}
+/*Mixin for postion, marginleft and left*/
+@mixin triInfoBox ($var1, $var2, $var3) {
+    position: $var1;
+    margin-left: $var2;
+    left: $var3;
+}
+/*Mixin for height and width*/
+@mixin HW ($var1, $var2){
+    height: $var1;
+    width: $var2;
+}
+
+@mixin mainText {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: darkred;
+    size: 25px;
+}
+@mixin disPos($var1, $var2){
+    display: $var1;
+    position: $var2;
+}
+@mixin flexDir($var1, $var2){
+    display: $var1;
+    flex-direction: $var2;
+}
+
+@mixin position($var1, $var2, $var3, $var4){
+    top: $var1;
+    bottom: $var2;
+    right: $var3;
+    left: $var4;
+}
+h1 {
+
+    padding-top: 90px;
+ 
+    .borderLeft {
+        @include HW (236px, 400px);
+        @include disPos(block, absolute);
+        @include position(89px, 0px, 0px, 150px);
+    }
+    .borderRight {
+        @include HW (236px, 400px);
+        @include position(89px, 0px, 0px, 700px);
+        @include disPos(block, absolute);
+        @include margin-RL (0);
+        
+    }
+    .duskLogo {
+        @include HW (200px, 400px);
+        @include disPos(block, relative);
+        @include margin-RL (auto);
+        
+    }
+}
+
+nav {
+    background-color: black;
+    position: fixed;
+    right: 1px;
+    width: 1245px;
+    padding: 10px;
+    font-size: 50px;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+}
+
+
+a { text-decoration: none; }
+a:visited { text-decoration: none; color: darkred;}// Keeps it dark red when just natural if that makes sense
+a:hover, a:active { text-decoration: none; color: red;} //Makes it red whenever clicked
+
+
+h2 {
+    img {
+        @include HW (200px, 700px);
+        display: block;
+        @include margin-RL(auto);
+    }
+
+}
+
+
+.container {
+    padding-top: 10px;
+    @include flexDir(flex, row);
+}
+
+.containerColumn {
+    padding-top: 10px;
+    @include flexDir(flex, column);
+}
+.gameInfoText {
+    @include HW (400px, 630px);
+    background-color: black;
+    @include disPos(block, relative);
+    @include position(0px, 0px, 0px, 90px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: darkred;
+    font-size: 23px;
+}
+
+.gameInfoImg {
+    @include HW (400px, 350px);
+    @include position(0px, 0px, 0px, 150px);
+    @include disPos(0, relative);
+    background-color: black;
+    img {
+        @include HW (100%, 100%);
+        @include margin-RL (auto);        
+    }
+    
+}
+
+.enemyInfoImg{
+    @include HW (300px, 350px);
+    background-color: black;
+    @include triInfoBox(relative, 30px, 40px);
+    @include flexDir(flex, column);
+    img {
+        background-color: black;
+        @include HW (300px, 350px);
+        @include margin-RL(auto)
+    }
+}
+
+.enemyInfoText{
+    @include HW (270px, 740px);
+    bottom: 295px;
+    margin-bottom: 30px;
+    background-color: black;
+    @include flexDir(flex, column);
+    @include triInfoBox(relative, 30px, 400px);
+    @include mainText();
+}
+
+.worldInfoImg {
+    @include HW (300px, 350px);
+    background-color: black;
+    @include triInfoBox(relative, 30px, 40px);
+    img {
+        @include HW (300px, 350px);
+        @include margin-RL(auto)
+    }
+}
+
+.worldInfoText{
+    @include HW (170px, 350px);
+    background-color: black;
+    margin-top: 20px;
+    @include triInfoBox(relative, 30px, 40px);
+    @include mainText();
+}
+
+.weaponsInfoText{
+    @include mainText();
+    @include HW (500px, 800px);
+    @include triInfoBox(relative, 185px, 40px);
+    background-color: black;
+    
+}
+
+.weaponsInfoImg{
+    @include triInfoBox(absolute, 30px, 40px);
+    img {
+        @include HW (auto, auto);
+        @include margin-RL(auto)
+    }
+}
+
+body{
+    background-color: darkred;
+    background-image: url(images/background1.jpg), url(images/background5.jpg);
+    background-repeat: no-repeat, repeat; 
+}

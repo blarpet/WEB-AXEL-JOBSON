@@ -1,0 +1,38 @@
+/*Ren CSS*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 25px;
+}
+
+nav {
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15vh;
+  width: 100vW;
+}
+
+button {
+  color: green;
+  font-style: italic;
+}
+
+main {
+  height: 50vh;
+  background-color: lightgreen;
+}
+
+footer {
+  height: 100vh;
+  background-image: url("https://leakeyfoundation.org/wp-content/uploads/2018/10/skywalker-hoolock-gibbon-02.adapt_.1900.1-1500x999.jpg");
+  background-color: green;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+@import './header';
+@import './variables';
+
+.contact button {
+    background: $primaryBtn;
+}
+
+.container{
+
+}
+
+@mixin random_color
