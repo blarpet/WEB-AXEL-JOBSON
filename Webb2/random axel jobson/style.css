@@ -1,8 +1,16 @@
-/* Creates mixins*/
+/*Mixin for setting both margin right and left as the same, for an example auto*/
 /*Mixin for postion, marginleft and left*/
 /*Mixin for height and width*/
+/*Mixin for the main text font for the website used everywhere except for the first snip bit of text.*/
+/*Sets display and position*/
+/*Sets display and direction*/
+/*Used for setting the position of an element(i hope thats the right term for it)*/
 h1 {
   padding-top: 90px;
+  /*This next 3 classes are bit a dumb since i could have just made it 1 image but made it 3 seperate images, Left this here because im too scared to mess things up but i did learn from this and the next images like this are just 1 instead of 3*/
+  /*Left logo image border*/
+  /*Right logo image border*/
+  /*The actual logo image*/
 }
 
 h1 .borderLeft {
@@ -38,6 +46,7 @@ h1 .duskLogo {
   margin-left: auto;
 }
 
+/*Navigation bar with links to the different parts of the page*/
 nav {
   background-color: black;
   position: fixed;
@@ -50,6 +59,7 @@ nav {
   z-index: 1;
 }
 
+/*Sets it so that the links to the other parts of the page are in darkred and red when you hover/click it*/
 a {
   text-decoration: none;
 }
@@ -64,6 +74,7 @@ a:hover, a:active {
   color: red;
 }
 
+/*Template for the logo kind image for each part of the page like "WORLDS" and "ENEMIES", would have made more of these if i had more time*/
 h2 img {
   height: 200px;
   width: 700px;
@@ -72,7 +83,8 @@ h2 img {
   margin-left: auto;
 }
 
-.container {
+/*Class Container for row*/
+.containerRow {
   padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,6 +95,7 @@ h2 img {
           flex-direction: row;
 }
 
+/*Class Container for columns*/
 .containerColumn {
   padding-top: 10px;
   display: -webkit-box;
@@ -94,6 +107,7 @@ h2 img {
           flex-direction: column;
 }
 
+/*Class for the main text element about the game*/
 .gameInfoText {
   height: 400px;
   width: 630px;
@@ -109,6 +123,7 @@ h2 img {
   font-size: 23px;
 }
 
+/*Class for image relating to main text about the game*/
 .gameInfoImg {
   height: 400px;
   width: 350px;
@@ -128,6 +143,7 @@ h2 img {
   margin-left: auto;
 }
 
+/*Class for the images of the enemies*/
 .enemyInfoImg {
   height: 300px;
   width: 350px;
@@ -152,6 +168,7 @@ h2 img {
   margin-left: auto;
 }
 
+/*Class for the text about the enemy factions*/
 .enemyInfoText {
   height: 270px;
   width: 740px;
@@ -173,6 +190,7 @@ h2 img {
   size: 25px;
 }
 
+/*Class for the images of the worlds*/
 .worldInfoImg {
   height: 300px;
   width: 350px;
@@ -189,6 +207,7 @@ h2 img {
   margin-left: auto;
 }
 
+/*Class for the text about the worlds*/
 .worldInfoText {
   height: 170px;
   width: 350px;
@@ -202,31 +221,25 @@ h2 img {
   size: 25px;
 }
 
-.weaponsInfoText {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: darkred;
-  size: 25px;
-  height: 500px;
-  width: 800px;
-  position: relative;
-  margin-left: 185px;
-  left: 40px;
-  background-color: black;
+/*This is not really used but might use if i continue to work on this on my own time*/
+/*
+.weaponsInfoText{
+    @include mainText();
+    @include HW (500px, 800px);
+    @include triInfoBox(relative, 185px, 40px);
+    background-color: black;
+    
 }
 
-.weaponsInfoImg {
-  position: absolute;
-  margin-left: 30px;
-  left: 40px;
+.weaponsInfoImg{
+    @include triInfoBox(absolute, 30px, 40px);
+    img {
+        @include HW (auto, auto);
+        @include margin-RL(auto)
+    }
 }
-
-.weaponsInfoImg img {
-  height: auto;
-  width: auto;
-  margin-right: auto;
-  margin-left: auto;
-}
-
+*/
+/*Sets the background images*/
 body {
   background-color: darkred;
   background-image: url(images/background1.jpg), url(images/background5.jpg);

@@ -1,4 +1,4 @@
-/* Creates mixins*/
+/*Mixin for setting both margin right and left as the same, for an example auto*/
 @mixin margin-RL ($var) {
     margin-right: $var;
     margin-left: $var;
@@ -14,21 +14,23 @@
     height: $var1;
     width: $var2;
 }
-
+/*Mixin for the main text font for the website used everywhere except for the first snip bit of text.*/
 @mixin mainText {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     color: darkred;
     size: 25px;
 }
+/*Sets display and position*/
 @mixin disPos($var1, $var2){
     display: $var1;
     position: $var2;
 }
+/*Sets display and direction*/
 @mixin flexDir($var1, $var2){
     display: $var1;
     flex-direction: $var2;
 }
-
+/*Used for setting the position of an element(i hope thats the right term for it)*/
 @mixin position($var1, $var2, $var3, $var4){
     top: $var1;
     bottom: $var2;
@@ -38,12 +40,15 @@
 h1 {
 
     padding-top: 90px;
- 
+
+    /*This next 3 classes are bit a dumb since i could have just made it 1 image but made it 3 seperate images, Left this here because im too scared to mess things up but i did learn from this and the next images like this are just 1 instead of 3*/
+    /*Left logo image border*/
     .borderLeft {
         @include HW (236px, 400px);
         @include disPos(block, absolute);
         @include position(89px, 0px, 0px, 150px);
     }
+    /*Right logo image border*/
     .borderRight {
         @include HW (236px, 400px);
         @include position(89px, 0px, 0px, 700px);
@@ -51,6 +56,7 @@ h1 {
         @include margin-RL (0);
         
     }
+    /*The actual logo image*/
     .duskLogo {
         @include HW (200px, 400px);
         @include disPos(block, relative);
@@ -58,7 +64,7 @@ h1 {
         
     }
 }
-
+/*Navigation bar with links to the different parts of the page*/
 nav {
     background-color: black;
     position: fixed;
@@ -71,12 +77,12 @@ nav {
     z-index: 1;
 }
 
-
+/*Sets it so that the links to the other parts of the page are in darkred and red when you hover/click it*/
 a { text-decoration: none; }
 a:visited { text-decoration: none; color: darkred;}// Keeps it dark red when just natural if that makes sense
 a:hover, a:active { text-decoration: none; color: red;} //Makes it red whenever clicked
 
-
+/*Template for the logo kind image for each part of the page like "WORLDS" and "ENEMIES", would have made more of these if i had more time*/
 h2 {
     img {
         @include HW (200px, 700px);
@@ -86,16 +92,17 @@ h2 {
 
 }
 
-
-.container {
+/*Class Container for row*/
+.containerRow {
     padding-top: 10px;
     @include flexDir(flex, row);
 }
-
+/*Class Container for columns*/
 .containerColumn {
     padding-top: 10px;
     @include flexDir(flex, column);
 }
+/*Class for the main text element about the game*/
 .gameInfoText {
     @include HW (400px, 630px);
     background-color: black;
@@ -105,7 +112,7 @@ h2 {
     color: darkred;
     font-size: 23px;
 }
-
+/*Class for image relating to main text about the game*/
 .gameInfoImg {
     @include HW (400px, 350px);
     @include position(0px, 0px, 0px, 150px);
@@ -117,7 +124,7 @@ h2 {
     }
     
 }
-
+/*Class for the images of the enemies*/
 .enemyInfoImg{
     @include HW (300px, 350px);
     background-color: black;
@@ -129,7 +136,7 @@ h2 {
         @include margin-RL(auto)
     }
 }
-
+/*Class for the text about the enemy factions*/
 .enemyInfoText{
     @include HW (270px, 740px);
     bottom: 295px;
@@ -139,7 +146,7 @@ h2 {
     @include triInfoBox(relative, 30px, 400px);
     @include mainText();
 }
-
+/*Class for the images of the worlds*/
 .worldInfoImg {
     @include HW (300px, 350px);
     background-color: black;
@@ -149,7 +156,7 @@ h2 {
         @include margin-RL(auto)
     }
 }
-
+/*Class for the text about the worlds*/
 .worldInfoText{
     @include HW (170px, 350px);
     background-color: black;
@@ -157,7 +164,8 @@ h2 {
     @include triInfoBox(relative, 30px, 40px);
     @include mainText();
 }
-
+/*This is not really used but might use if i continue to work on this on my own time*/
+/*
 .weaponsInfoText{
     @include mainText();
     @include HW (500px, 800px);
@@ -173,7 +181,9 @@ h2 {
         @include margin-RL(auto)
     }
 }
+*/
 
+/*Sets the background images*/
 body{
     background-color: darkred;
     background-image: url(images/background1.jpg), url(images/background5.jpg);
