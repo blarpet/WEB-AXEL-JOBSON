@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "bst_inlämning",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bst_inlämning"
+	}
+}
