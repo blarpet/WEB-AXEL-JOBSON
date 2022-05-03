@@ -1,10 +1,4 @@
 /*Ren CSS*/
-* {
-  margin: 0px;
-  padding: 0px;
-  font-size: 25px;
-}
-
 nav {
   background-color: black;
   display: -webkit-box;
@@ -20,11 +14,6 @@ nav {
   width: 100%;
 }
 
-button {
-  color: black;
-  font-style: italic;
-}
-
 img {
   max-width: 100%;
   max-height: 100%;
@@ -37,14 +26,13 @@ main {
   height: 100vh;
 }
 
-b {
+p {
   width: 100px;
   height: 20px;
-  background-color: black;
-  color: red;
+}
+
+section {
   border-style: solid;
-  border-color: #131313;
-  border-width: 4px;
 }
 
 footer {
