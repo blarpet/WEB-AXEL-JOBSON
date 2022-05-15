@@ -1,0 +1,56 @@
+@mixin flexDir($var1, $var2){
+    display: $var1;
+    flex-direction: $var2;
+}
+
+body{
+    background-color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+} 
+
+nav {
+    background-color:  lightgreen;
+    position: fixed;
+    width: 1500px;
+    left: -10px;
+    padding: 10px;
+    font-size: 50px;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+}
+.forumModule{
+    background-color: lightgreen;
+    color: black;
+}
+
+.forumPad{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.forumTable{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+.forumTable th, td{
+    padding: 5px;
+    border: 2px solid black;
+
+}
+
+.forumBackground{
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.container {
+    @include flexDir(flex, row)
+}
